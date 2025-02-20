@@ -1,0 +1,42 @@
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.blg
+*.brf
+*.log
+*.lof
+*.lot
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.nav
+*.snm
+*.vrb
+*.run.xml
+
+# Compiled output files (if you don't want to track the PDFs, uncomment these)
+*.dvi
+*.ps
+
+# Temporary files created by editors
+*~
+*.swp
+*.swo
+*.tmp
+
+# Files created by latexmk (if used)
+latexmkrc
+
+# Other conversion files (if any)
+*.xdv
+
+# macOS-specific files
+.DS_Store
+
+# VS Code settings (if you don't want to track your local settings)
+.vscode/
+
+# Miscellaneous
+*.log.bak

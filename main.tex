@@ -1,0 +1,100 @@
+\documentclass[aspectratio=169, xcolor={dvipsnames}, hyperref={colorlinks=true,linkcolor=themecolor, urlcolor=magenta,citecolor=violet, hyperfootnotes=true}]{beamer}
+\input{header.tex}
+
+
+\title{Beamer Template}
+\subtitle{A Demo}
+\institute[JHU]{Johns Hopkins University}
+\author{Joe Doe}
+
+\addbibresource{reference.bib}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\begin{frame}{Table of Content}
+    \tableofcontents[hideallsubsections]
+\end{frame}
+
+\AtBeginSubsection[]{\begin{frame}<beamer>\frametitle{Table of Content}\tableofcontents[currentsection,currentsubsection,subsectionstyle=show/shaded/hide]\end{frame}}
+\section{Math}
+\begin{frame}
+    \frametitle{Math}
+    Wo do math in beamer. Here are some examples:
+    \begin{itemize}
+        \item Inline math: $a^2 + b^2 = c^2$.
+        \item Display math:
+              \begin{equation}
+                  \int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}.
+              \end{equation}
+        \item Align environment:
+              \begin{align}
+                  a & = b + c \\
+                  & = d + e.
+              \end{align}
+    \end{itemize}
+\end{frame}
+
+
+\section{Useful Environment}
+\subsection{Standard Environment}
+\begin{frame}{\texttt{itemize} and \texttt{enumerate}}
+    This is a demonstration of various environments. The first is \texttt{itemize}:
+
+    \begin{itemize}
+        \item Item 1
+        \item Item 2
+        \item etc.
+    \end{itemize}
+
+    Usually I'll use \texttt{enumerate} as well:
+
+    \begin{enumerate}
+        \item Item 1
+        \item Item 2
+        \item etc.
+    \end{enumerate}
+\end{frame}
+
+\subsection{Customized Environment}
+
+\begin{frame}{Definition, Examples, etc.}
+    All the common environments are available, e.g.,
+    \begin{itemize}
+        \item \emph{Theorem}-related: \texttt{lemma}, \texttt{theorem}, \texttt{corollary}.
+        \item \emph{Common} environments: \texttt{definition}, \texttt{example}, \texttt{problem}.
+        \item \emph{Others}: \texttt{prev}, \texttt{observe}, \texttt{assumption}, \texttt{remark}, \texttt{intuition}.
+    \end{itemize}
+
+    I'll just show you two examples:
+
+    \begin{example}[A demonstration]
+        This is an \texttt{example} environment.
+    \end{example}
+
+    \begin{prev}
+        This is a \texttt{prev} environment.
+    \end{prev}
+\end{frame}
+
+\subsection{Citation}
+\begin{frame}{Citation}
+    We can cite papers using \texttt{biblatex}.
+    \begin{itemize}
+        \item This is a citation \cite{smith2025example}.
+        \item This is another citation \cite{johnson2024innovative, lee2023computational}.
+        \item This is a link \url{https://www.google.com}.
+    \end{itemize}
+\end{frame}
+
+\section{References}
+
+\begin{frame}{References}
+    \printbibliography
+\end{frame}
+
+
+\end{document}
